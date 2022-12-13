@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A218A52F2948992C0032CEC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A52E2948992C0032CEC2 /* AppDelegate.swift */; };
+		A218A5312948992C0032CEC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5302948992C0032CEC2 /* SceneDelegate.swift */; };
+		A218A5332948992C0032CEC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5322948992C0032CEC2 /* ViewController.swift */; };
+		A218A5362948992C0032CEC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218A5342948992C0032CEC2 /* Main.storyboard */; };
+		A218A5382948992E0032CEC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A218A5372948992E0032CEC2 /* Assets.xcassets */; };
+		A218A53B2948992E0032CEC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218A5392948992E0032CEC2 /* LaunchScreen.storyboard */; };
+		A218A5462948992F0032CEC2 /* Jumis_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5452948992F0032CEC2 /* Jumis_2Tests.swift */; };
+		A218A5502948992F0032CEC2 /* Jumis_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A54F2948992F0032CEC2 /* Jumis_2UITests.swift */; };
+		A218A5522948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5512948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A218A5422948992F0032CEC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A218A5232948992C0032CEC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A218A52A2948992C0032CEC2;
+			remoteInfo = Jumis_2;
+		};
+		A218A54C2948992F0032CEC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A218A5232948992C0032CEC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A218A52A2948992C0032CEC2;
+			remoteInfo = Jumis_2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A218A52B2948992C0032CEC2 /* Jumis_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jumis_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A218A52E2948992C0032CEC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A218A5302948992C0032CEC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A218A5322948992C0032CEC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A218A5352948992C0032CEC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A218A5372948992E0032CEC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A218A53A2948992E0032CEC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A218A53C2948992E0032CEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A218A5412948992F0032CEC2 /* Jumis_2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jumis_2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A218A5452948992F0032CEC2 /* Jumis_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumis_2Tests.swift; sourceTree = "<group>"; };
+		A218A54B2948992F0032CEC2 /* Jumis_2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jumis_2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A218A54F2948992F0032CEC2 /* Jumis_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumis_2UITests.swift; sourceTree = "<group>"; };
+		A218A5512948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumis_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A218A5282948992C0032CEC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A218A53E2948992F0032CEC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A218A5482948992F0032CEC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A218A5222948992C0032CEC2 = {
+			isa = PBXGroup;
+			children = (
+				A218A52D2948992C0032CEC2 /* Jumis_2 */,
+				A218A5442948992F0032CEC2 /* Jumis_2Tests */,
+				A218A54E2948992F0032CEC2 /* Jumis_2UITests */,
+				A218A52C2948992C0032CEC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A218A52C2948992C0032CEC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A218A52B2948992C0032CEC2 /* Jumis_2.app */,
+				A218A5412948992F0032CEC2 /* Jumis_2Tests.xctest */,
+				A218A54B2948992F0032CEC2 /* Jumis_2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A218A52D2948992C0032CEC2 /* Jumis_2 */ = {
+			isa = PBXGroup;
+			children = (
+				A218A52E2948992C0032CEC2 /* AppDelegate.swift */,
+				A218A5302948992C0032CEC2 /* SceneDelegate.swift */,
+				A218A5322948992C0032CEC2 /* ViewController.swift */,
+				A218A5342948992C0032CEC2 /* Main.storyboard */,
+				A218A5372948992E0032CEC2 /* Assets.xcassets */,
+				A218A5392948992E0032CEC2 /* LaunchScreen.storyboard */,
+				A218A53C2948992E0032CEC2 /* Info.plist */,
+			);
+			path = Jumis_2;
+			sourceTree = "<group>";
+		};
+		A218A5442948992F0032CEC2 /* Jumis_2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A218A5452948992F0032CEC2 /* Jumis_2Tests.swift */,
+			);
+			path = Jumis_2Tests;
+			sourceTree = "<group>";
+		};
+		A218A54E2948992F0032CEC2 /* Jumis_2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A218A54F2948992F0032CEC2 /* Jumis_2UITests.swift */,
+				A218A5512948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift */,
+			);
+			path = Jumis_2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A218A52A2948992C0032CEC2 /* Jumis_2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A218A5552948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2" */;
+			buildPhases = (
+				A218A5272948992C0032CEC2 /* Sources */,
+				A218A5282948992C0032CEC2 /* Frameworks */,
+				A218A5292948992C0032CEC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jumis_2;
+			productName = Jumis_2;
+			productReference = A218A52B2948992C0032CEC2 /* Jumis_2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A218A5402948992F0032CEC2 /* Jumis_2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A218A5582948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2Tests" */;
+			buildPhases = (
+				A218A53D2948992F0032CEC2 /* Sources */,
+				A218A53E2948992F0032CEC2 /* Frameworks */,
+				A218A53F2948992F0032CEC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A218A5432948992F0032CEC2 /* PBXTargetDependency */,
+			);
+			name = Jumis_2Tests;
+			productName = Jumis_2Tests;
+			productReference = A218A5412948992F0032CEC2 /* Jumis_2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A218A54A2948992F0032CEC2 /* Jumis_2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A218A55B2948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2UITests" */;
+			buildPhases = (
+				A218A5472948992F0032CEC2 /* Sources */,
+				A218A5482948992F0032CEC2 /* Frameworks */,
+				A218A5492948992F0032CEC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A218A54D2948992F0032CEC2 /* PBXTargetDependency */,
+			);
+			name = Jumis_2UITests;
+			productName = Jumis_2UITests;
+			productReference = A218A54B2948992F0032CEC2 /* Jumis_2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A218A5232948992C0032CEC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					A218A52A2948992C0032CEC2 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					A218A5402948992F0032CEC2 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = A218A52A2948992C0032CEC2;
+					};
+					A218A54A2948992F0032CEC2 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = A218A52A2948992C0032CEC2;
+					};
+				};
+			};
+			buildConfigurationList = A218A5262948992C0032CEC2 /* Build configuration list for PBXProject "Jumis_2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A218A5222948992C0032CEC2;
+			productRefGroup = A218A52C2948992C0032CEC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A218A52A2948992C0032CEC2 /* Jumis_2 */,
+				A218A5402948992F0032CEC2 /* Jumis_2Tests */,
+				A218A54A2948992F0032CEC2 /* Jumis_2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A218A5292948992C0032CEC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A218A53B2948992E0032CEC2 /* LaunchScreen.storyboard in Resources */,
+				A218A5382948992E0032CEC2 /* Assets.xcassets in Resources */,
+				A218A5362948992C0032CEC2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A218A53F2948992F0032CEC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A218A5492948992F0032CEC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A218A5272948992C0032CEC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A218A5332948992C0032CEC2 /* ViewController.swift in Sources */,
+				A218A52F2948992C0032CEC2 /* AppDelegate.swift in Sources */,
+				A218A5312948992C0032CEC2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A218A53D2948992F0032CEC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A218A5462948992F0032CEC2 /* Jumis_2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A218A5472948992F0032CEC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A218A5522948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift in Sources */,
+				A218A5502948992F0032CEC2 /* Jumis_2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A218A5432948992F0032CEC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A218A52A2948992C0032CEC2 /* Jumis_2 */;
+			targetProxy = A218A5422948992F0032CEC2 /* PBXContainerItemProxy */;
+		};
+		A218A54D2948992F0032CEC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A218A52A2948992C0032CEC2 /* Jumis_2 */;
+			targetProxy = A218A54C2948992F0032CEC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A218A5342948992C0032CEC2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A218A5352948992C0032CEC2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A218A5392948992E0032CEC2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A218A53A2948992E0032CEC2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A218A5532948992F0032CEC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A218A5542948992F0032CEC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A218A5562948992F0032CEC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jumis_2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumis.Jumis-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A218A5572948992F0032CEC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jumis_2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumis.Jumis-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A218A5592948992F0032CEC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumis.Jumis-2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jumis_2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Jumis_2";
+			};
+			name = Debug;
+		};
+		A218A55A2948992F0032CEC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumis.Jumis-2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jumis_2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Jumis_2";
+			};
+			name = Release;
+		};
+		A218A55C2948992F0032CEC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumis.Jumis-2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Jumis_2;
+			};
+			name = Debug;
+		};
+		A218A55D2948992F0032CEC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumis.Jumis-2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Jumis_2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A218A5262948992C0032CEC2 /* Build configuration list for PBXProject "Jumis_2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A218A5532948992F0032CEC2 /* Debug */,
+				A218A5542948992F0032CEC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A218A5552948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A218A5562948992F0032CEC2 /* Debug */,
+				A218A5572948992F0032CEC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A218A5582948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A218A5592948992F0032CEC2 /* Debug */,
+				A218A55A2948992F0032CEC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A218A55B2948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A218A55C2948992F0032CEC2 /* Debug */,
+				A218A55D2948992F0032CEC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A218A5232948992C0032CEC2 /* Project object */;
+}
