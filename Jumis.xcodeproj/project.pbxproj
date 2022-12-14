@@ -19,8 +19,8 @@
 		A218A56129489C010032CEC2 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A218A55F29489C010032CEC2 /* TitleTableViewCell.xib */; };
 		A218A5632948A44D0032CEC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5322948992C0032CEC2 /* ViewController.swift */; };
 		A21D42282948C2EC00A5B637 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D42272948C2EC00A5B637 /* UserController.swift */; };
-		A21D422A2948C79C00A5B637 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D42292948C79C00A5B637 /* HomeController.swift */; };
 		A21D422C2948D03300A5B637 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D422B2948D03300A5B637 /* SettingsController.swift */; };
+		A2A894A5294A1CE700644592 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A894A4294A1CE700644592 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		A218A55E29489C010032CEC2 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		A218A55F29489C010032CEC2 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		A21D42272948C2EC00A5B637 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
-		A21D42292948C79C00A5B637 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A21D422B2948D03300A5B637 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		A2A894A4294A1CE700644592 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 				A218A5392948992E0032CEC2 /* LaunchScreen.storyboard */,
 				A218A53C2948992E0032CEC2 /* Info.plist */,
 				A21D42272948C2EC00A5B637 /* UserController.swift */,
-				A21D42292948C79C00A5B637 /* HomeController.swift */,
 				A21D422B2948D03300A5B637 /* SettingsController.swift */,
+				A2A894A4294A1CE700644592 /* LoginController.swift */,
 			);
 			path = Jumis_2;
 			sourceTree = "<group>";
@@ -276,8 +276,8 @@
 			files = (
 				A218A56029489C010032CEC2 /* TitleTableViewCell.swift in Sources */,
 				A218A52F2948992C0032CEC2 /* AppDelegate.swift in Sources */,
-				A21D422A2948C79C00A5B637 /* HomeController.swift in Sources */,
 				A21D422C2948D03300A5B637 /* SettingsController.swift in Sources */,
+				A2A894A5294A1CE700644592 /* LoginController.swift in Sources */,
 				A21D42282948C2EC00A5B637 /* UserController.swift in Sources */,
 				A218A5632948A44D0032CEC2 /* ViewController.swift in Sources */,
 				A218A5312948992C0032CEC2 /* SceneDelegate.swift in Sources */,

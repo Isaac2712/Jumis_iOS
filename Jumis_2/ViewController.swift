@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Jumis_2
+//  Jumis
 //
 //  Created by Isaac Marroquí Penalva on 13/12/22.
 //
@@ -9,14 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: Variables
     var titleName = ["User", "Settings"]
+    var viewOpen: Bool = true
+    let emailUsu = LoginController.email
 
+    //MARK: Outlets
     @IBOutlet var labelHome: UIView!
     @IBOutlet weak var contenidoView: UIView!
+    @IBOutlet weak var labelEmail: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var viewOpen: Bool = true
-    
+    //MARK: Actions
     @IBAction func Menu(_ sender: Any) {
         contenidoView.isHidden = false
         tableView.isHidden = false
@@ -41,16 +45,23 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: Functions
     func registerTableCells(){
         tableView.register(UINib(nibName: "TitleTableViewCell", bundle: nil), forCellReuseIdentifier: "TitleTableViewCell")
     }
     
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         // Llamada al metodo del tableViewCell
         registerTableCells()
         self.contenidoView.isHidden = true
         viewOpen = true
+        labelEmail.text = emailUsu
+        self.tableView.backgroundColor = #colorLiteral(red: 0.1201617494, green: 0.2964957356, blue: 0.3807103634, alpha: 1)
+        
+        //Variable global
+        print(emailUsu)
     }
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
