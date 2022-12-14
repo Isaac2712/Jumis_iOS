@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		A218A52F2948992C0032CEC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A52E2948992C0032CEC2 /* AppDelegate.swift */; };
 		A218A5312948992C0032CEC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5302948992C0032CEC2 /* SceneDelegate.swift */; };
-		A218A5332948992C0032CEC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5322948992C0032CEC2 /* ViewController.swift */; };
 		A218A5362948992C0032CEC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218A5342948992C0032CEC2 /* Main.storyboard */; };
 		A218A5382948992E0032CEC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A218A5372948992E0032CEC2 /* Assets.xcassets */; };
 		A218A53B2948992E0032CEC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218A5392948992E0032CEC2 /* LaunchScreen.storyboard */; };
 		A218A5462948992F0032CEC2 /* Jumis_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5452948992F0032CEC2 /* Jumis_2Tests.swift */; };
 		A218A5502948992F0032CEC2 /* Jumis_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A54F2948992F0032CEC2 /* Jumis_2UITests.swift */; };
 		A218A5522948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5512948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift */; };
+		A218A56029489C010032CEC2 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A55E29489C010032CEC2 /* TitleTableViewCell.swift */; };
+		A218A56129489C010032CEC2 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A218A55F29489C010032CEC2 /* TitleTableViewCell.xib */; };
+		A218A5632948A44D0032CEC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5322948992C0032CEC2 /* ViewController.swift */; };
+		A21D42282948C2EC00A5B637 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D42272948C2EC00A5B637 /* UserController.swift */; };
+		A21D422A2948C79C00A5B637 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D42292948C79C00A5B637 /* HomeController.swift */; };
+		A21D422C2948D03300A5B637 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D422B2948D03300A5B637 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A218A52B2948992C0032CEC2 /* Jumis_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jumis_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A218A52B2948992C0032CEC2 /* Jumis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jumis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218A52E2948992C0032CEC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A218A5302948992C0032CEC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A218A5322948992C0032CEC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +49,16 @@
 		A218A5372948992E0032CEC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A218A53A2948992E0032CEC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A218A53C2948992E0032CEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A218A5412948992F0032CEC2 /* Jumis_2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jumis_2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A218A5412948992F0032CEC2 /* JumisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218A5452948992F0032CEC2 /* Jumis_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumis_2Tests.swift; sourceTree = "<group>"; };
-		A218A54B2948992F0032CEC2 /* Jumis_2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jumis_2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A218A54B2948992F0032CEC2 /* JumisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218A54F2948992F0032CEC2 /* Jumis_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumis_2UITests.swift; sourceTree = "<group>"; };
 		A218A5512948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumis_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A218A55E29489C010032CEC2 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		A218A55F29489C010032CEC2 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		A21D42272948C2EC00A5B637 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		A21D42292948C79C00A5B637 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		A21D422B2948D03300A5B637 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +99,9 @@
 		A218A52C2948992C0032CEC2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A218A52B2948992C0032CEC2 /* Jumis_2.app */,
-				A218A5412948992F0032CEC2 /* Jumis_2Tests.xctest */,
-				A218A54B2948992F0032CEC2 /* Jumis_2UITests.xctest */,
+				A218A52B2948992C0032CEC2 /* Jumis.app */,
+				A218A5412948992F0032CEC2 /* JumisTests.xctest */,
+				A218A54B2948992F0032CEC2 /* JumisUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,10 +112,15 @@
 				A218A52E2948992C0032CEC2 /* AppDelegate.swift */,
 				A218A5302948992C0032CEC2 /* SceneDelegate.swift */,
 				A218A5322948992C0032CEC2 /* ViewController.swift */,
+				A218A55E29489C010032CEC2 /* TitleTableViewCell.swift */,
+				A218A55F29489C010032CEC2 /* TitleTableViewCell.xib */,
 				A218A5342948992C0032CEC2 /* Main.storyboard */,
 				A218A5372948992E0032CEC2 /* Assets.xcassets */,
 				A218A5392948992E0032CEC2 /* LaunchScreen.storyboard */,
 				A218A53C2948992E0032CEC2 /* Info.plist */,
+				A21D42272948C2EC00A5B637 /* UserController.swift */,
+				A21D42292948C79C00A5B637 /* HomeController.swift */,
+				A21D422B2948D03300A5B637 /* SettingsController.swift */,
 			);
 			path = Jumis_2;
 			sourceTree = "<group>";
@@ -130,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A218A52A2948992C0032CEC2 /* Jumis_2 */ = {
+		A218A52A2948992C0032CEC2 /* Jumis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A218A5552948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2" */;
+			buildConfigurationList = A218A5552948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis" */;
 			buildPhases = (
 				A218A5272948992C0032CEC2 /* Sources */,
 				A218A5282948992C0032CEC2 /* Frameworks */,
@@ -142,14 +157,14 @@
 			);
 			dependencies = (
 			);
-			name = Jumis_2;
+			name = Jumis;
 			productName = Jumis_2;
-			productReference = A218A52B2948992C0032CEC2 /* Jumis_2.app */;
+			productReference = A218A52B2948992C0032CEC2 /* Jumis.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A218A5402948992F0032CEC2 /* Jumis_2Tests */ = {
+		A218A5402948992F0032CEC2 /* JumisTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A218A5582948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2Tests" */;
+			buildConfigurationList = A218A5582948992F0032CEC2 /* Build configuration list for PBXNativeTarget "JumisTests" */;
 			buildPhases = (
 				A218A53D2948992F0032CEC2 /* Sources */,
 				A218A53E2948992F0032CEC2 /* Frameworks */,
@@ -160,14 +175,14 @@
 			dependencies = (
 				A218A5432948992F0032CEC2 /* PBXTargetDependency */,
 			);
-			name = Jumis_2Tests;
+			name = JumisTests;
 			productName = Jumis_2Tests;
-			productReference = A218A5412948992F0032CEC2 /* Jumis_2Tests.xctest */;
+			productReference = A218A5412948992F0032CEC2 /* JumisTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A218A54A2948992F0032CEC2 /* Jumis_2UITests */ = {
+		A218A54A2948992F0032CEC2 /* JumisUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A218A55B2948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2UITests" */;
+			buildConfigurationList = A218A55B2948992F0032CEC2 /* Build configuration list for PBXNativeTarget "JumisUITests" */;
 			buildPhases = (
 				A218A5472948992F0032CEC2 /* Sources */,
 				A218A5482948992F0032CEC2 /* Frameworks */,
@@ -178,9 +193,9 @@
 			dependencies = (
 				A218A54D2948992F0032CEC2 /* PBXTargetDependency */,
 			);
-			name = Jumis_2UITests;
+			name = JumisUITests;
 			productName = Jumis_2UITests;
-			productReference = A218A54B2948992F0032CEC2 /* Jumis_2UITests.xctest */;
+			productReference = A218A54B2948992F0032CEC2 /* JumisUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A218A5262948992C0032CEC2 /* Build configuration list for PBXProject "Jumis_2" */;
+			buildConfigurationList = A218A5262948992C0032CEC2 /* Build configuration list for PBXProject "Jumis" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A218A52A2948992C0032CEC2 /* Jumis_2 */,
-				A218A5402948992F0032CEC2 /* Jumis_2Tests */,
-				A218A54A2948992F0032CEC2 /* Jumis_2UITests */,
+				A218A52A2948992C0032CEC2 /* Jumis */,
+				A218A5402948992F0032CEC2 /* JumisTests */,
+				A218A54A2948992F0032CEC2 /* JumisUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A218A56129489C010032CEC2 /* TitleTableViewCell.xib in Resources */,
 				A218A53B2948992E0032CEC2 /* LaunchScreen.storyboard in Resources */,
 				A218A5382948992E0032CEC2 /* Assets.xcassets in Resources */,
 				A218A5362948992C0032CEC2 /* Main.storyboard in Resources */,
@@ -258,8 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A218A5332948992C0032CEC2 /* ViewController.swift in Sources */,
+				A218A56029489C010032CEC2 /* TitleTableViewCell.swift in Sources */,
 				A218A52F2948992C0032CEC2 /* AppDelegate.swift in Sources */,
+				A21D422A2948C79C00A5B637 /* HomeController.swift in Sources */,
+				A21D422C2948D03300A5B637 /* SettingsController.swift in Sources */,
+				A21D42282948C2EC00A5B637 /* UserController.swift in Sources */,
+				A218A5632948A44D0032CEC2 /* ViewController.swift in Sources */,
 				A218A5312948992C0032CEC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,12 +306,12 @@
 /* Begin PBXTargetDependency section */
 		A218A5432948992F0032CEC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A218A52A2948992C0032CEC2 /* Jumis_2 */;
+			target = A218A52A2948992C0032CEC2 /* Jumis */;
 			targetProxy = A218A5422948992F0032CEC2 /* PBXContainerItemProxy */;
 		};
 		A218A54D2948992F0032CEC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A218A52A2948992C0032CEC2 /* Jumis_2 */;
+			target = A218A52A2948992C0032CEC2 /* Jumis */;
 			targetProxy = A218A54C2948992F0032CEC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -499,7 +519,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jumis_2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Jumis_2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jumis.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Jumis";
 			};
 			name = Debug;
 		};
@@ -518,7 +538,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jumis_2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Jumis_2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jumis.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Jumis";
 			};
 			name = Release;
 		};
@@ -559,7 +579,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A218A5262948992C0032CEC2 /* Build configuration list for PBXProject "Jumis_2" */ = {
+		A218A5262948992C0032CEC2 /* Build configuration list for PBXProject "Jumis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A218A5532948992F0032CEC2 /* Debug */,
@@ -568,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A218A5552948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2" */ = {
+		A218A5552948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A218A5562948992F0032CEC2 /* Debug */,
@@ -577,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A218A5582948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2Tests" */ = {
+		A218A5582948992F0032CEC2 /* Build configuration list for PBXNativeTarget "JumisTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A218A5592948992F0032CEC2 /* Debug */,
@@ -586,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A218A55B2948992F0032CEC2 /* Build configuration list for PBXNativeTarget "Jumis_2UITests" */ = {
+		A218A55B2948992F0032CEC2 /* Build configuration list for PBXNativeTarget "JumisUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A218A55C2948992F0032CEC2 /* Debug */,
