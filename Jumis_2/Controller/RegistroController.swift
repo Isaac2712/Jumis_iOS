@@ -36,16 +36,8 @@ class RegistroController: UIViewController {
     @IBOutlet weak var buttonSignUp: UIButton!
     @IBOutlet weak var fechaNacimientoUsu: UIDatePicker!
     
-    //MARK: Override
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    //MARK: Action buttons
-    @IBAction func signUp(_ sender: Any) {
-        if(nombreUsu.text == "" && emailUsu.text == "" && contrasenaUsu.text == "")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(nombreUsu.text == "" || emailUsu.text == "" || contrasenaUsu.text == "")
         {
             let alert = UIAlertController(title: "Formulario", message:"Hay campos vacios", preferredStyle: .alert)
             
@@ -57,7 +49,18 @@ class RegistroController: UIViewController {
         }
         else
         {
-            print("Usuario: \(nombreUsu.text!), Contraseña \(contrasenaUsu.text!), Email  \(emailUsu.text!), Fecha \(fechaNacimientoUsu.date)")
+            let email = emailUsu.text ?? ""
+            let vc = segue.destination as! LoginController
+            vc.recibirEmailRegistro = email
         }
     }
+    
+    //MARK: Override
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    //MARK: Action buttons
 }

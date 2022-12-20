@@ -11,6 +11,9 @@ import QuartzCore
 
 class LoginController: UIViewController {
     
+    //MARK: Variables
+    var recibirEmailRegistro: String = ""
+    
     //MARK: Global
     static var sessionActive = 0
     static var email = ""
@@ -40,6 +43,9 @@ class LoginController: UIViewController {
     //MARK: Override
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usuario.text = recibirEmailRegistro
+        
         login.layer.cornerRadius = 15.0
         login.layer.masksToBounds = true
         registro.layer.cornerRadius = 15.0
@@ -56,7 +62,7 @@ class LoginController: UIViewController {
     
     //MARK: Action buttons
     @IBAction func login(_ sender: Any) {
-        if(usuario.text == "" && contrasena.text == "")
+        if(usuario.text == "" || contrasena.text == "")
         {
             //Mostrar alerta si no hay datos introducidos en el formulario
             let alert = UIAlertController(title: "Identificación", message:"Campo de usuario y contraseña vacios", preferredStyle: .alert)

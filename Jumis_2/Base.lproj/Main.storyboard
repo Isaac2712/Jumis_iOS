@@ -301,7 +301,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="xco-vk-72Z">
-                                <rect key="frame" x="17" y="379" width="137" height="30"/>
+                                <rect key="frame" x="16" y="379" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -319,7 +319,7 @@
                                     <color key="baseBackgroundColor" red="0.38426917789999998" green="0.73705524209999995" blue="0.74118149280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="signUp:" destination="Nn5-jo-y2e" eventType="touchUpInside" id="kYr-mU-N8u"/>
+                                    <segue destination="UVa-IN-7Pm" kind="show" id="TB7-SU-jWp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -330,7 +330,6 @@
                     <navigationItem key="navigationItem" id="w5r-ZB-K0p"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="buttonSignUp" destination="yoO-F5-gQc" id="dNZ-lB-lAY"/>
                         <outlet property="contrasenaUsu" destination="bb5-y1-IaB" id="8KB-5c-l2T"/>
                         <outlet property="emailUsu" destination="DaH-Tg-IZy" id="90x-6M-xSa"/>
                         <outlet property="fechaNacimientoUsu" destination="xco-vk-72Z" id="spt-jd-g0p"/>
@@ -505,6 +504,9 @@
             <point key="canvasLocation" x="3946" y="127"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uBb-pp-15l"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="Color"/>
     <resources>
         <image name="logo" width="350" height="350"/>
