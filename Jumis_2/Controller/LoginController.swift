@@ -47,12 +47,11 @@ class LoginController: UIViewController {
         
         logo.layer.cornerRadius = logo.frame.width / 2
         logo.layer.masksToBounds = true
-        // Do any additional setup after loading the view.
     }
         
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     //MARK: Action buttons
@@ -70,8 +69,6 @@ class LoginController: UIViewController {
         }
         else
         {
-            //Mostrar datos introducidos en el formulario
-            print("Usuario: \(usuario.text!), Contraseña \(contrasena.text!)")
             //Asignamos a la variable global el email
             LoginController.email = usuario.text!
             LoginController.sessionActive = 1

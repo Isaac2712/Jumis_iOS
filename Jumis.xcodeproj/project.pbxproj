@@ -21,6 +21,7 @@
 		A21D42282948C2EC00A5B637 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D42272948C2EC00A5B637 /* UserController.swift */; };
 		A21D422C2948D03300A5B637 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D422B2948D03300A5B637 /* SettingsController.swift */; };
 		A2A894A5294A1CE700644592 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A894A4294A1CE700644592 /* LoginController.swift */; };
+		A2D92F1929519FD80040F3AB /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D92F1829519FD80040F3AB /* RegistroController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A21D42272948C2EC00A5B637 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		A21D422B2948D03300A5B637 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		A2A894A4294A1CE700644592 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A2D92F1829519FD80040F3AB /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,18 +111,15 @@
 		A218A52D2948992C0032CEC2 /* Jumis_2 */ = {
 			isa = PBXGroup;
 			children = (
+				A2D92F1529519CF90040F3AB /* Controller */,
 				A218A52E2948992C0032CEC2 /* AppDelegate.swift */,
 				A218A5302948992C0032CEC2 /* SceneDelegate.swift */,
-				A218A5322948992C0032CEC2 /* ViewController.swift */,
 				A218A55E29489C010032CEC2 /* TitleTableViewCell.swift */,
 				A218A55F29489C010032CEC2 /* TitleTableViewCell.xib */,
 				A218A5342948992C0032CEC2 /* Main.storyboard */,
 				A218A5372948992E0032CEC2 /* Assets.xcassets */,
 				A218A5392948992E0032CEC2 /* LaunchScreen.storyboard */,
 				A218A53C2948992E0032CEC2 /* Info.plist */,
-				A21D42272948C2EC00A5B637 /* UserController.swift */,
-				A21D422B2948D03300A5B637 /* SettingsController.swift */,
-				A2A894A4294A1CE700644592 /* LoginController.swift */,
 			);
 			path = Jumis_2;
 			sourceTree = "<group>";
@@ -140,6 +139,18 @@
 				A218A5512948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift */,
 			);
 			path = Jumis_2UITests;
+			sourceTree = "<group>";
+		};
+		A2D92F1529519CF90040F3AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A218A5322948992C0032CEC2 /* ViewController.swift */,
+				A2A894A4294A1CE700644592 /* LoginController.swift */,
+				A21D42272948C2EC00A5B637 /* UserController.swift */,
+				A21D422B2948D03300A5B637 /* SettingsController.swift */,
+				A2D92F1829519FD80040F3AB /* RegistroController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 				A2A894A5294A1CE700644592 /* LoginController.swift in Sources */,
 				A21D42282948C2EC00A5B637 /* UserController.swift in Sources */,
 				A218A5632948A44D0032CEC2 /* ViewController.swift in Sources */,
+				A2D92F1929519FD80040F3AB /* RegistroController.swift in Sources */,
 				A218A5312948992C0032CEC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
