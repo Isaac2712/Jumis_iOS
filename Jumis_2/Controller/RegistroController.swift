@@ -52,11 +52,11 @@ class RegistroController: UIViewController {
     }
     
     //MARK: Action buttons
-    /*@IBAction func CuentaYaCreada(_ sender: Any) {
+    @IBAction func CuentaYaCreada(_ sender: Any) {
         if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
             navigationController?.pushViewController(vc, animated: true)
         }
-    }*/
+    }
     
     @IBAction func SignUp(_ sender: Any) {
         if(nombreUsu.text == "" || emailUsu.text == "" || contrasenaUsu.text == "")

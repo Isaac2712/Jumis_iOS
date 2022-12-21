@@ -240,7 +240,7 @@
                                     <color key="baseForegroundColor" red="0.38426917789999998" green="0.73705524209999995" blue="0.74118149280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="UVa-IN-7Pm" kind="show" id="X1B-0N-x3A"/>
+                                    <action selector="CuentaYaCreada:" destination="Nn5-jo-y2e" eventType="touchUpInside" id="6Ri-mb-ntn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whx-rR-W4t">
@@ -327,7 +327,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="w5r-ZB-K0p"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contrasenaUsu" destination="bb5-y1-IaB" id="8KB-5c-l2T"/>
                         <outlet property="emailUsu" destination="DaH-Tg-IZy" id="90x-6M-xSa"/>
@@ -500,9 +500,6 @@
             <point key="canvasLocation" x="1380.9160305343512" y="100.70422535211269"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="X1B-0N-x3A"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" name="Color"/>
     <resources>
         <image name="logo" width="350" height="350"/>
