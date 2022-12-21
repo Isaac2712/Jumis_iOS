@@ -33,12 +33,35 @@ class RegistroController: UIViewController {
             contrasenaUsu.attributedPlaceholder = colorWhite
         }
     }
-    @IBOutlet weak var buttonSignUp: UIButton!
     @IBOutlet weak var fechaNacimientoUsu: UIDatePicker!
+
+    //MARK: Override
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        //El valor true, es para desaparecer la barra
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        //El valor false, vuelve a poner el navigation bar para el próximo viewcontroller.
+    }
+    
+    //MARK: Action buttons
+    /*@IBAction func CuentaYaCreada(_ sender: Any) {
+        if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }*/
+    
+    @IBAction func SignUp(_ sender: Any) {
         if(nombreUsu.text == "" || emailUsu.text == "" || contrasenaUsu.text == "")
         {
+            print("Entra en el IF")
             let alert = UIAlertController(title: "Formulario", message:"Hay campos vacios", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { _ in
@@ -49,18 +72,14 @@ class RegistroController: UIViewController {
         }
         else
         {
+            print("Entra en el ELSE")
             let email = emailUsu.text ?? ""
-            let vc = segue.destination as! LoginController
-            vc.recibirEmailRegistro = email
+            let pass = contrasenaUsu.text ?? ""
+            if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
+                vc.recibirEmailRegistro = email
+                vc.recibirPassRegistro = pass
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
-    
-    //MARK: Override
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    //MARK: Action buttons
 }

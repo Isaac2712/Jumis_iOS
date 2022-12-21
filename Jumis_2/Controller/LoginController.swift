@@ -13,6 +13,7 @@ class LoginController: UIViewController {
     
     //MARK: Variables
     var recibirEmailRegistro: String = ""
+    var recibirPassRegistro: String = ""
     
     //MARK: Global
     static var sessionActive = 0
@@ -45,6 +46,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         usuario.text = recibirEmailRegistro
+        contrasena.text = recibirPassRegistro
         
         login.layer.cornerRadius = 15.0
         login.layer.masksToBounds = true
@@ -55,9 +57,15 @@ class LoginController: UIViewController {
         logo.layer.masksToBounds = true
     }
         
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        //El valor true, es para desaparecer la barra
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        //El valor false, vuelve a poner el navigation bar para el próximo viewcontroller.
     }
     
     //MARK: Action buttons

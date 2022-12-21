@@ -89,7 +89,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
            }
        } else if indexPath.row == 2 {
            //Mandamos al login
-           view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+           //view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+           if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
+               self.navigationController?.popViewController(animated: true)
+           }
        }
     }
 }
