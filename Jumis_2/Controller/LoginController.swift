@@ -16,8 +16,8 @@ class LoginController: UIViewController {
     var recibirPassRegistro: String = ""
     
     //MARK: Global
-    static var sessionActive = 0
-    static var email = ""
+    //static var sessionActive = 0
+    //static var email = ""
     
     //MARK: Outlets
     @IBOutlet weak var usuario: UITextField!{
@@ -68,24 +68,33 @@ class LoginController: UIViewController {
         //El valor false, vuelve a poner el navigation bar para el próximo viewcontroller.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueLoginToHome"
+        {
+            if(usuario.text == "" || contrasena.text == "")
+            {
+                //Mostrar alerta si no hay datos introducidos en el formulario
+                let alert = UIAlertController(title: "Identificación", message:"Campo de usuario y contraseña vacios", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { _ in
+                    //Cancel Action
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+            else
+            {
+                //Asignamos a la variable global el email
+                //LoginController.email = usuario.text!
+                //LoginController.sessionActive = 1
+                let vc = segue.destination as? ViewController
+                vc?.emailUsu = usuario.text!
+            }
+        }
+    }
+    
     //MARK: Action buttons
     @IBAction func login(_ sender: Any) {
-        if(usuario.text == "" || contrasena.text == "")
-        {
-            //Mostrar alerta si no hay datos introducidos en el formulario
-            let alert = UIAlertController(title: "Identificación", message:"Campo de usuario y contraseña vacios", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { _ in
-                //Cancel Action
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
-        }
-        else
-        {
-            //Asignamos a la variable global el email
-            LoginController.email = usuario.text!
-            LoginController.sessionActive = 1
-        }
+        
     }
 }

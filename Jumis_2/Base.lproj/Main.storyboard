@@ -417,8 +417,7 @@
                                     <color key="baseBackgroundColor" red="0.38426917789999998" green="0.73705524209999995" blue="0.74118149280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="login:" destination="UVa-IN-7Pm" eventType="touchUpInside" id="zg2-di-wUp"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Cpj-8x-Zrv"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueLoginToHome" id="Cpj-8x-Zrv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-PR-OkN">

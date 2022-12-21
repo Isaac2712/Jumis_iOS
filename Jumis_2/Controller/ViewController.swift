@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     var titleName = ["User", "Settings", "Cerrar sesión"]
     var imagenes = ["usuario", "ajustes","close"]
     var viewOpen: Bool = true
-    let emailUsu = LoginController.email
+    //let emailUsu = LoginController.email
+    var emailUsu: String?
     let label = UILabel(frame: CGRect(x: 30, y: 120, width: 200, height: 20))
 
     //MARK: Outlets
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
 
         //Label programmatically
         label.textColor = .white
-        label.text = "Lista del usuario \(emailUsu)"
+        label.text = "Lista del usuario \(emailUsu ?? "")"
         self.view.addSubview(label)
     }
 }
@@ -88,11 +89,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
                self.navigationController?.pushViewController(vc, animated: true)
            }
        } else if indexPath.row == 2 {
-           //Mandamos al login
-           //view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-           if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
-               self.navigationController?.popViewController(animated: true)
-           }
+            self.navigationController?.popViewController(animated: true)
        }
     }
 }
