@@ -20,9 +20,8 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5k-OG-1SG">
                                 <rect key="frame" x="0.0" y="117" width="212" height="100"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="TitleTableViewCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nrF-mV-67l">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="TableViewCellMenu" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nrF-mV-67l">
                                         <rect key="frame" x="0.0" y="0.0" width="204" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="eYE-AO-vV0"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="HL5-f0-9vj"/>
@@ -39,6 +38,18 @@
                                     <constraint firstAttribute="trailing" secondItem="nrF-mV-67l" secondAttribute="trailing" id="t7g-aF-mNj"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="TableViewCellTask" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JTQ-UN-yeM">
+                                <rect key="frame" x="0.0" y="251" width="393" height="601"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16706615690000001" green="0.2925115526" blue="0.37255984539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.16706615690000001" green="0.2925115526" blue="0.37255984539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pZv-Zp-IHL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FSi-vc-G5T"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.16706615690000001" green="0.2925115526" blue="0.37255984539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -82,7 +93,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contenidoView" destination="u5k-OG-1SG" id="6ys-Wa-7dz"/>
-                        <outlet property="tableView" destination="nrF-mV-67l" id="62z-y9-Sd8"/>
+                        <outlet property="tableViewMenu" destination="nrF-mV-67l" id="bXZ-oV-a6j"/>
+                        <outlet property="tableViewTasks" destination="JTQ-UN-yeM" id="6Z6-tu-RjZ"/>
                         <segue destination="hkS-Mz-Lxo" kind="show" identifier="" id="12O-pw-bIf"/>
                         <segue destination="Sfg-Fp-8AR" kind="show" id="Ajn-yQ-nfa"/>
                     </connections>
@@ -300,7 +312,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="xco-vk-72Z">
-                                <rect key="frame" x="16" y="379" width="138" height="30"/>
+                                <rect key="frame" x="16" y="379" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <color key="tintColor" systemColor="labelColor"/>
