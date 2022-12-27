@@ -61,7 +61,6 @@ class RegistroController: UIViewController {
     @IBAction func SignUp(_ sender: Any) {
         if(nombreUsu.text == "" || emailUsu.text == "" || contrasenaUsu.text == "")
         {
-            print("Entra en el IF")
             let alert = UIAlertController(title: "Formulario", message:"Hay campos vacios", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { _ in
@@ -72,7 +71,6 @@ class RegistroController: UIViewController {
         }
         else
         {
-            print("Entra en el ELSE")
             let email = emailUsu.text ?? ""
             let pass = contrasenaUsu.text ?? ""
             if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {

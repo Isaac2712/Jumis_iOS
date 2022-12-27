@@ -15,7 +15,7 @@ class DBHelper{
         let documentDatabasePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(databaseName).path
         
         if FileManager.default.fileExists(atPath: documentDatabasePath){
-            print("Database exists (alredy")
+            print("Database exists (alredy)")
         } else {
             guard let bundleDatabasePath = Bundle.main.resourceURL?.appendingPathComponent(databaseName).path else {
                 print("Error: Database Path doesn´t exist")

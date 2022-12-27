@@ -68,7 +68,7 @@ class UserController: UIViewController {
         fechaNacimientoUsuario.isUserInteractionEnabled = false
         
         //Recogemos email usuario de login
-        nombreUsuario.text = recibirEmail
+        emailUsuario.text = recibirEmail
         
         //Boton guardar nuevos datos usuario oculto
         guardarUser.isHidden = true

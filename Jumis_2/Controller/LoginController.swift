@@ -94,7 +94,4 @@ class LoginController: UIViewController {
     }
     
     //MARK: Action buttons
-    @IBAction func login(_ sender: Any) {
-        
-    }
 }

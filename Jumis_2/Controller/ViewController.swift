@@ -98,6 +98,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
        if tableView == tableViewMenu {
            if indexPath.row == 0 {
                if let vc = storyboard?.instantiateViewController(identifier: "UserController") as? UserController {
+                   vc.recibirEmail = emailUsu
                    self.navigationController?.pushViewController(vc, animated: true)
                }
            } else if indexPath.row == 1 {

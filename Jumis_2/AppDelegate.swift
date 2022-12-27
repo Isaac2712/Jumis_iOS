@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let dbPointer = DBHelper.getDatabasePointer(databaseName: "BDJumis.sqbpro") {
             databasePointer = dbPointer
-        } else {
-             
         }
         
         return true
