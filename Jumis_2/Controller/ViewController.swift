@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var viewOpen: Bool = true
     var emailUsu: String?
     let label = UILabel(frame: CGRect(x: 30, y: 120, width: 200, height: 20))
+    //BBDD
+    let db = DBHelper()
 
     //MARK: Outlets
     @IBOutlet weak var contenidoView: UIView!
@@ -58,6 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableViewTasks.register(UINib(nibName: "TableViewCellTask", bundle: nil), forCellReuseIdentifier: "TableViewCellTask")
     }
     
+    
     //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +74,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.textColor = .white
         label.text = "Lista del usuario \(emailUsu ?? "")"
         self.view.addSubview(label)
+        
+        db.readUsers()
     }
     
     //MARK: TableView

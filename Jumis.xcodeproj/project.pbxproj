@@ -18,8 +18,8 @@
 		A218A5632948A44D0032CEC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5322948992C0032CEC2 /* ViewController.swift */; };
 		A21D42282948C2EC00A5B637 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D42272948C2EC00A5B637 /* UserController.swift */; };
 		A21D422C2948D03300A5B637 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D422B2948D03300A5B637 /* SettingsController.swift */; };
+		A2823839295C4B4200904E66 /* BDJumis.sql in Resources */ = {isa = PBXBuildFile; fileRef = A2823838295C4B4200904E66 /* BDJumis.sql */; };
 		A2A894A5294A1CE700644592 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A894A4294A1CE700644592 /* LoginController.swift */; };
-		A2BCB4FF29546323003CFEA2 /* BDJumis.sqbpro in Resources */ = {isa = PBXBuildFile; fileRef = A2BCB4FE29546323003CFEA2 /* BDJumis.sqbpro */; };
 		A2BCB50129546355003CFEA2 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BCB50029546355003CFEA2 /* DBHelper.swift */; };
 		A2D92F1929519FD80040F3AB /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D92F1829519FD80040F3AB /* RegistroController.swift */; };
 		A2E4BAA729532512008DA755 /* TableViewCellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E4BAA529532512008DA755 /* TableViewCellMenu.swift */; };
@@ -61,8 +61,10 @@
 		A218A5512948992F0032CEC2 /* Jumis_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumis_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A21D42272948C2EC00A5B637 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		A21D422B2948D03300A5B637 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		A282382F295C463200904E66 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A2823830295C463200904E66 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A2823838295C4B4200904E66 /* BDJumis.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BDJumis.sql; path = ../../../../Downloads/BDJumis.sql; sourceTree = "<group>"; };
 		A2A894A4294A1CE700644592 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		A2BCB4FE29546323003CFEA2 /* BDJumis.sqbpro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BDJumis.sqbpro; sourceTree = "<group>"; };
 		A2BCB50029546355003CFEA2 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		A2D92F1829519FD80040F3AB /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
 		A2E4BAA529532512008DA755 /* TableViewCellMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMenu.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				A218A5442948992F0032CEC2 /* Jumis_2Tests */,
 				A218A54E2948992F0032CEC2 /* Jumis_2UITests */,
 				A218A52C2948992C0032CEC2 /* Products */,
+				A282382E295C463100904E66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,11 +163,20 @@
 			path = Jumis_2UITests;
 			sourceTree = "<group>";
 		};
+		A282382E295C463100904E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2823830295C463200904E66 /* libsqlite3.0.tbd */,
+				A282382F295C463200904E66 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A2BCB4FD29546316003CFEA2 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				A2BCB4FE29546323003CFEA2 /* BDJumis.sqbpro */,
 				A2BCB50029546355003CFEA2 /* DBHelper.swift */,
+				A2823838295C4B4200904E66 /* BDJumis.sql */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -286,9 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2E4BAAC2953271F008DA755 /* TableViewCellTask.xib in Resources */,
+				A2823839295C4B4200904E66 /* BDJumis.sql in Resources */,
 				A218A53B2948992E0032CEC2 /* LaunchScreen.storyboard in Resources */,
 				A218A5382948992E0032CEC2 /* Assets.xcassets in Resources */,
-				A2BCB4FF29546323003CFEA2 /* BDJumis.sqbpro in Resources */,
 				A2E4BAA829532512008DA755 /* TableViewCellMenu.xib in Resources */,
 				A218A5362948992C0032CEC2 /* Main.storyboard in Resources */,
 			);
