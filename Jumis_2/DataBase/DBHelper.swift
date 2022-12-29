@@ -184,6 +184,22 @@ class DBHelper{
         sqlite3_finalize(queryStatement)
         return "-1"
     }
+    
+    func existsUserLogin(email:String, pass:String) -> Bool{
+        let queryStatementString = "SELECT * FROM User WHERE email =\(email) and password=\(pass);"
+        var queryStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+           while sqlite3_step(queryStatement) == SQLITE_ROW {
+               sqlite3_finalize(queryStatement)
+               return true
+           }
+        } else {
+           print("SELECT statement could not be prepared")
+        }
+        sqlite3_finalize(queryStatement)
+        return false
+    }
+    
          
     //MARK: Drop/Delete
     func dropTable(table: String) {
