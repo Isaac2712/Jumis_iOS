@@ -9,6 +9,14 @@ import UIKit
 
 class RegistroController: UIViewController {
     
+    //MARK: Variables
+    var idUsuario: Int32 = 0
+    var nombre: String = ""
+    var email: String = ""
+    var contrasena: String = ""
+    let dateFormater = DateFormatter()
+    var dbFunc = DBHelper()
+    
     //MARK: Outlets
     @IBOutlet weak var nombreUsu: UITextField!{
         didSet{
@@ -71,12 +79,28 @@ class RegistroController: UIViewController {
         }
         else
         {
-            let email = emailUsu.text ?? ""
-            let pass = contrasenaUsu.text ?? ""
-            if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
-                vc.recibirEmailRegistro = email
-                vc.recibirPassRegistro = pass
-                navigationController?.pushViewController(vc, animated: true)
+            nombre = nombreUsu.text!
+            email = emailUsu.text!
+            contrasena = contrasenaUsu.text!
+            let emailConsult = dbFunc.existsUser(email: email)
+            if emailConsult == "-1" {
+                dbFunc.insertUser(nombre: nombre, email: email, pass: contrasena, fecha_nac: dateFormater.string(from: fechaNacimientoUsu.date))
+                let email = emailUsu.text ?? ""
+                let pass = contrasenaUsu.text ?? ""
+                if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
+                    vc.recibirEmailRegistro = email
+                    vc.recibirPassRegistro = pass
+                    navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+            else {
+                let alert = UIAlertController(title: "Formulario", message:"El email ya existe", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { _ in
+                    //Cancel Action
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }

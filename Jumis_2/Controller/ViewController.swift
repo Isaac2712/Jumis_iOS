@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var emailUsu: String?
     let label = UILabel(frame: CGRect(x: 30, y: 120, width: 200, height: 20))
     //BBDD
-    let db = DBHelper()
+    let dbFunc = DBHelper()
 
     //MARK: Outlets
     @IBOutlet weak var contenidoView: UIView!
@@ -56,10 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: Functions
     func registerTableCells(){
         tableViewMenu.register(UINib(nibName: "TableViewCellMenu", bundle: nil), forCellReuseIdentifier: "TableViewCellMenu")
-        
         tableViewTasks.register(UINib(nibName: "TableViewCellTask", bundle: nil), forCellReuseIdentifier: "TableViewCellTask")
     }
-    
     
     //MARK: Overrides
     override func viewDidLoad() {
@@ -75,7 +73,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.text = "Lista del usuario \(emailUsu ?? "")"
         self.view.addSubview(label)
         
-        db.readUsers()
+        //db.dropTable(table: "User")
+        dbFunc.readUsers()
     }
     
     //MARK: TableView
