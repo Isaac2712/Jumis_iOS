@@ -82,6 +82,7 @@ class RegistroController: UIViewController {
             nombre = nombreUsu.text!
             email = emailUsu.text!
             contrasena = contrasenaUsu.text!
+            dateFormater.dateStyle = .short
             let emailConsult = dbFunc.existsUser(email: email)
             if emailConsult == "-1" { //Comprobar que no existe el usuario con ese email en la BBDD
                 dbFunc.insertUser(nombre: nombre, email: email, pass: contrasena, fecha_nac: dateFormater.string(from: fechaNacimientoUsu.date))

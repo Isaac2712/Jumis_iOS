@@ -112,8 +112,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
            } else if indexPath.row == 2 {
                 self.navigationController?.popViewController(animated: true)
            }
-       } else
-       {
        }
     }
 }

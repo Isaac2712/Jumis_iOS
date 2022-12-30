@@ -36,7 +36,7 @@ class DBHelper{
     
     //MARK: Create Tables
     func createTableUser() {
-        let createTableString = "CREATE TABLE IF NOT EXISTS User(USERID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, fecha_nacimiento DATE NOT NULL);"
+        let createTableString = "CREATE TABLE IF NOT EXISTS User(USERID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, fecha_nacimiento TEXT NOT NULL);"
         var createTableStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
         {
@@ -53,7 +53,7 @@ class DBHelper{
     }
     
     func createTableTask() {
-        let createTableString = "CREATE TABLE IF NOT EXISTS Task(TASKID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nameTask TEXT NOT NULL, description VARCHAR(200) NOT NULL, nameList TEXT NOT NULL, date DATE NOT NULL, hour TIME NOT NULL);"
+        let createTableString = "CREATE TABLE IF NOT EXISTS Task(TASKID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nameTask TEXT NOT NULL, description VARCHAR(200) NOT NULL, nameList TEXT NOT NULL, date TEXT NOT NULL, hour TEXT NOT NULL);"
         var createTableStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
         {
@@ -70,7 +70,7 @@ class DBHelper{
     }
     
     func createTableUserTask(){
-        let createTableString = "CREATE TABLE IF NOT EXISTS UserTask(USERTASKID INTEGER NOT NULL, TASKUSERID TEXT NOT NULL, FOREIGN KEY('USERTASKID') REFERENCES 'User'('USERID'), FOREIGN KEY('TASKUSERID') REFERENCES 'Task'('TASKID'), PRIMARY KEY('USERTASKID','TASKUSERID'));"
+        let createTableString = "CREATE TABLE IF NOT EXISTS UserTask(USERTASKID INTEGER NOT NULL, TASKUSERID INTEGER NOT NULL, FOREIGN KEY('USERTASKID') REFERENCES 'User'('USERID'), FOREIGN KEY('TASKUSERID') REFERENCES 'Task'('TASKID'), PRIMARY KEY('USERTASKID','TASKUSERID'));"
         var createTableStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
         {
@@ -89,8 +89,7 @@ class DBHelper{
     //MARK: Insert Data
     func insertUser(nombre:String, email:String, pass:String, fecha_nac: String)
     {
-        var idInsert = idUser()
-        print(idInsert)
+        let idInsert = idUser()
         let insertStatementString = "INSERT INTO User (USERID, nombre, email, password, fecha_nacimiento) VALUES (?, ?, ?, ?, ?);"
         var insertStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
@@ -101,14 +100,14 @@ class DBHelper{
             sqlite3_bind_text(insertStatement, 5, (fecha_nac as NSString).utf8String, -1, nil)
            
            if sqlite3_step(insertStatement) == SQLITE_DONE {
-               print("Successfully inserted row.")
+               print("Successfully inserted row to insertUser.")
            } else {
-               print("Could not insert row.")
+               print("Could not insert row to insertUser.")
            }
        } else {
            print("INSERT statement could not be prepared.")
        }
-       sqlite3_finalize(insertStatement)
+        sqlite3_finalize(insertStatement)
     }
     
     func insertTask(id: Int, nameTask: String, description: String, nameList: String, date: String, hour: String ){
@@ -123,9 +122,9 @@ class DBHelper{
             sqlite3_bind_text(insertStatement, 6, (hour as NSString).utf8String, -1, nil)
            
            if sqlite3_step(insertStatement) == SQLITE_DONE {
-               print("Successfully inserted row.")
+               print("Successfully inserted row to insertTask.")
            } else {
-               print("Could not insert row.")
+               print("Could not insert row to insertTask.")
            }
        } else {
            print("INSERT statement could not be prepared.")
@@ -169,24 +168,23 @@ class DBHelper{
     }
     
     func existsUser(email:String) -> String{
-        let queryStatementString = "SELECT * FROM User WHERE email =\(email);"
+        let queryStatementString = "SELECT * FROM User WHERE email ='\(email)';"
         var queryStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
            while sqlite3_step(queryStatement) == SQLITE_ROW {
                let emailConsult = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
-               print(emailConsult)
                sqlite3_finalize(queryStatement)
                return emailConsult
            }
         } else {
-           print("SELECT statement could not be prepared")
+           print("SELECT statement could not be prepared existsUser")
         }
         sqlite3_finalize(queryStatement)
         return "-1"
     }
     
     func existsUserLogin(email:String, pass:String) -> Bool{
-        let queryStatementString = "SELECT * FROM User WHERE email =\(email) and password=\(pass);"
+        let queryStatementString = "SELECT * FROM User WHERE email ='\(email)' and password='\(pass)';"
         var queryStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
            while sqlite3_step(queryStatement) == SQLITE_ROW {
@@ -194,7 +192,7 @@ class DBHelper{
                return true
            }
         } else {
-           print("SELECT statement could not be prepared")
+           print("SELECT statement could not be prepared existsUserLogin")
         }
         sqlite3_finalize(queryStatement)
         return false
@@ -207,12 +205,12 @@ class DBHelper{
         var deleteStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, deleteStatementStirng, -1, &deleteStatement, nil) == SQLITE_OK {
            if sqlite3_step(deleteStatement) == SQLITE_DONE {
-               print("Successfully deleted.")
+               print("Successfully drop.")
            } else {
-               print("Could not delete")
+               print("Could not drop")
            }
         } else {
-           print("DELETE statement could not be prepared")
+           print("DROP statement could not be prepared")
         }
         sqlite3_finalize(deleteStatement)
     }
