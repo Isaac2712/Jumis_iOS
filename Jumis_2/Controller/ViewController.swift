@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var titleName = ["User", "Settings", "Cerrar sesión"]
     var imagenes = ["usuario", "ajustes","close"]
     //TableViewTasks
-    var tasks = ["Tarea1", "Tarea2"]
+    var tasksBD = Array<Task>()
     var viewOpen: Bool = true
     var emailUsu: String?
     let label = UILabel(frame: CGRect(x: 30, y: 120, width: 200, height: 20))
@@ -73,8 +73,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.text = "Lista del usuario \(emailUsu ?? "")"
         self.view.addSubview(label)
         
-        //db.dropTable(table: "User")
-        dbFunc.readUsers()
+        //dbFunc.readUsers()
+        tasksBD = dbFunc.readTaskUser()
+        
     }
     
     //MARK: TableView
@@ -82,7 +83,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if tableView == tableViewMenu {
             return titleName.count
         } else {
-            return tasks.count
+            return tasksBD.count
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -94,7 +95,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return cell
         } else {
             let cellTask = tableView.dequeueReusableCell(withIdentifier: "TableViewCellTask") as! TableViewCellTask
-            cellTask.nameTask.text = tasks[indexPath.row]
+            cellTask.nameTask.text = tasksBD[indexPath.row].nameTask
             return cellTask
         }
     }

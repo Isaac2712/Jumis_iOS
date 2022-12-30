@@ -53,7 +53,7 @@ class DBHelper{
     }
     
     func createTableTask() {
-        let createTableString = "CREATE TABLE IF NOT EXISTS Task(TASKID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nameTask TEXT NOT NULL, description VARCHAR(200) NOT NULL, nameList TEXT NOT NULL, date TEXT NOT NULL, hour TEXT NOT NULL);"
+        let createTableString = "CREATE TABLE IF NOT EXISTS Task(TASKID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nameTask TEXT NOT NULL, description TEXT NOT NULL, nameList TEXT NOT NULL, date TEXT NOT NULL, hour TEXT NOT NULL);"
         var createTableStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
         {
@@ -132,6 +132,23 @@ class DBHelper{
        sqlite3_finalize(insertStatement)
     }
     
+    func insertUserTask(usertaskid: Int32, taskuserid: Int32){
+        let insertStatementString = "INSERT INTO UserTask (USERTASKID, TASKUSERID) VALUES (?, ?);"
+        var insertStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+            sqlite3_bind_int(insertStatement, 1, Int32(usertaskid))
+            sqlite3_bind_int(insertStatement, 2, Int32(taskuserid))
+           if sqlite3_step(insertStatement) == SQLITE_DONE {
+               print("Successfully inserted row to insertUserTask.")
+           } else {
+               print("Could not insert row to insertUserTask.")
+           }
+       } else {
+           print("INSERT statement could not be prepared.")
+       }
+       sqlite3_finalize(insertStatement)
+    }
+    
     //MARK: Id
     func idUser() -> Int32{
         let queryStatementString = "SELECT USERID FROM User ORDER BY USERID DESC LIMIT 1;"
@@ -165,6 +182,27 @@ class DBHelper{
            print("SELECT statement could not be prepared")
         }
         sqlite3_finalize(queryStatement)
+    }
+    
+    func readTaskUser() -> [Task]  {
+        let queryStatementString = "SELECT * FROM Task;"
+        var queryStatement: OpaquePointer? = nil
+        var tasks: [Task] = []
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+          while sqlite3_step(queryStatement) == SQLITE_ROW {
+              let id = sqlite3_column_int(queryStatement, 0)
+              let nameTask = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+              let description = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+              let nameList = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
+              let date = String(describing: String(cString: sqlite3_column_database_name(queryStatement, 4)))
+              let hour = String(describing: String(cString: sqlite3_column_text(queryStatement, 5)))
+              tasks.append(Task(TASKID: Int32(id), nameTask: nameTask, description: description, nameList: nameList, date: date, hour: hour))
+          }
+        } else {
+          print("SELECT statement could not be prepared")
+        }
+        sqlite3_finalize(queryStatement)
+        return tasks
     }
     
     func existsUser(email:String) -> String{

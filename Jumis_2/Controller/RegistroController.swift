@@ -88,6 +88,9 @@ class RegistroController: UIViewController {
                 dbFunc.insertUser(nombre: nombre, email: email, pass: contrasena, fecha_nac: dateFormater.string(from: fechaNacimientoUsu.date))
                 let email = emailUsu.text ?? ""
                 let pass = contrasenaUsu.text ?? ""
+                //Añadimos datos a la tabla Task y UserTask cuando registramos un usuario
+                let dataTask = Task(TASKID: 0, nameTask: "", description: "", nameList: "", date: "", hour: "")
+                let dataUserTask = UserTask(USERTASKID: 0, TASKUSERID: 0)
                 if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
                     vc.recibirEmailRegistro = email
                     vc.recibirPassRegistro = pass
