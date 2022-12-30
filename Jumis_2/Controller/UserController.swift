@@ -11,6 +11,8 @@ class UserController: UIViewController {
     
     //MARK: Variables
     var recibirEmail: String!
+    var dbFunc = DBHelper()
+    var dataUser = Array<User>()
     
     //MARK: Outlets
     @IBOutlet weak var nombreUsuario: UILabel!
@@ -69,6 +71,11 @@ class UserController: UIViewController {
         
         //Recogemos email usuario de login
         emailUsuario.text = recibirEmail
+        dataUser = dbFunc.dataUser(email: (emailUsuario.text ?? ""))
+        nombreUsuario.text = dataUser[0].nombre
+        emailUsuario.text = dataUser[0].email
+        contrasenaUsuario.text = dataUser[0].password
+        fechaNacimientoUsuario.text = dataUser[0].fecha_nacimiento
         
         //Boton guardar nuevos datos usuario oculto
         guardarUser.isHidden = true

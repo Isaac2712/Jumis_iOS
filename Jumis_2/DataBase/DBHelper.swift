@@ -221,6 +221,26 @@ class DBHelper{
         return "-1"
     }
     
+    func dataUser(email: String) -> [User]{
+        let queryStatementString = "SELECT * FROM User WHERE email ='\(email)';"
+        var queryStatement: OpaquePointer? = nil
+        var user: [User] = []
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+           while sqlite3_step(queryStatement) == SQLITE_ROW {
+               let userid = sqlite3_column_int(queryStatement, 0)
+               let nombre = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+               let email = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+               let password = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
+               let fecha_nacimiento = String(describing: String(cString: sqlite3_column_text(queryStatement, 4)))
+               user.append(User(USERID: Int32(userid), nombre: nombre, email: email, password: password, fecha_nacimiento: fecha_nacimiento))
+           }
+        } else {
+           print("SELECT statement could not be prepared existsUser")
+        }
+        sqlite3_finalize(queryStatement)
+        return user
+    }
+    
     func existsUserLogin(email:String, pass:String) -> Bool{
         let queryStatementString = "SELECT * FROM User WHERE email ='\(email)' and password='\(pass)';"
         var queryStatement: OpaquePointer? = nil

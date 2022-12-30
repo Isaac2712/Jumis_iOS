@@ -43,3 +43,19 @@ class UserTask {
         dbFunc.insertUserTask(usertaskid: 2, taskuserid: 2) //Introducimos la tarea con id 2 en el usuario que se registre con el id 2
     }
 }
+
+class User{
+    var USERID: Int32
+    var nombre: String
+    var email: String
+    var password: String
+    var fecha_nacimiento: String
+    
+    init(USERID: Int32, nombre: String, email: String, password: String, fecha_nacimiento: String) {
+        self.USERID = USERID
+        self.nombre = nombre
+        self.email = email
+        self.password = password
+        self.fecha_nacimiento = fecha_nacimiento
+    }
+}

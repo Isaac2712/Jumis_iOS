@@ -75,7 +75,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //dbFunc.readUsers()
         tasksBD = dbFunc.readTaskUser()
-        
     }
     
     //MARK: TableView
