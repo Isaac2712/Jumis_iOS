@@ -17,8 +17,7 @@ class DBHelper{
     }
     
     //MARK: Open Database
-    func openDatabase() -> OpaquePointer?
-    {
+    func openDatabase() -> OpaquePointer? {
        let filePath = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
            .appendingPathComponent(dbPath)
        var db: OpaquePointer? = nil
@@ -184,18 +183,17 @@ class DBHelper{
         sqlite3_finalize(queryStatement)
     }
     
-    func readTaskUser() -> [Task]  {
-        let queryStatementString = "SELECT * FROM Task;"
+    func readTaskUser(id:Int32) -> [Task]  {
+        let queryStatementString = "SELECT Task.nameTask, Task.description, Task.nameList, Task.date, Task.hour FROM Task INNER JOIN UserTask ON UserTask.TASKUSERID = Task.TASKID INNER JOIN User ON User.USERID = UserTask.USERTASKID WHERE USER.USERID = '\(id)';"
         var queryStatement: OpaquePointer? = nil
         var tasks: [Task] = []
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
           while sqlite3_step(queryStatement) == SQLITE_ROW {
-              let id = sqlite3_column_int(queryStatement, 0)
-              let nameTask = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
-              let description = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
-              let nameList = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
-              let date = String(describing: String(cString: sqlite3_column_database_name(queryStatement, 4)))
-              let hour = String(describing: String(cString: sqlite3_column_text(queryStatement, 5)))
+              let nameTask = String(describing: String(cString: sqlite3_column_text(queryStatement, 0)))
+              let description = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+              let nameList = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+              let date = String(describing: String(cString: sqlite3_column_database_name(queryStatement, 3)))
+              let hour = String(describing: String(cString: sqlite3_column_text(queryStatement, 4)))
               tasks.append(Task(TASKID: Int32(id), nameTask: nameTask, description: description, nameList: nameList, date: date, hour: hour))
           }
         } else {
@@ -287,6 +285,22 @@ class DBHelper{
             print("DELETE statement could not be prepared")
         }
         sqlite3_finalize(deleteStatement)
+    }
+    
+    //MARK: Update
+    func updateUser(oldEmail: String, email: String, pass: String, fecha:String){
+        let updateStatementString = "UPDATE User SET email = '\(email)', password = '\(pass)', fecha_nacimiento = '\(fecha)' where email = '\(oldEmail)'";
+        var updateStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
+           if sqlite3_step(updateStatement) == SQLITE_DONE {
+               print("Successfully updatet row to updateUser.")
+           } else {
+               print("Could not update row to updateUser.")
+           }
+       } else {
+           print("UPDATE statement could not be prepared.")
+       }
+       sqlite3_finalize(updateStatement)
     }
 }
 

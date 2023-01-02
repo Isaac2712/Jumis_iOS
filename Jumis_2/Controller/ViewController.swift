@@ -15,9 +15,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var imagenes = ["usuario", "ajustes","close"]
     //TableViewTasks
     var tasksBD = Array<Task>()
+    var dataUser = Array<User>()
     var viewOpen: Bool = true
     var emailUsu: String?
-    let label = UILabel(frame: CGRect(x: 30, y: 120, width: 200, height: 20))
+    let label = UILabel(frame: CGRect(x: 30, y: 120, width: 300, height: 20))
     //BBDD
     let dbFunc = DBHelper()
 
@@ -73,8 +74,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.text = "Lista del usuario \(emailUsu ?? "")"
         self.view.addSubview(label)
         
-        //dbFunc.readUsers()
-        tasksBD = dbFunc.readTaskUser()
+        
+        dataUser = dbFunc.dataUser(email: (emailUsu ?? ""))
+        var aux:Int32 = dataUser[0].USERID
+        print(aux)
+        tasksBD = dbFunc.readTaskUser(id: aux)
     }
     
     //MARK: TableView

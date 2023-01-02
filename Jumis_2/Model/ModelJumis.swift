@@ -59,8 +59,25 @@ class User{
         self.password = password
         self.fecha_nacimiento = fecha_nacimiento
         
-        dbFunc.insertUser(nombre: "Isaac", email: "isaac@gmail.com", pass: "1234", fecha_nac: "02/04/1997")
-        dbFunc.insertUser(nombre: "Juanjo", email: "juanjo@gmail.com", pass: "1234", fecha_nac: "25/02/2001")
+        var existeUser1: Bool = false
+        var email:String! = "isaac@gmail.com"
+        var pass:String! = "1234"
+        existeUser1 = dbFunc.existsUserLogin(email: email, pass: pass)
+        if !existeUser1
+        {
+            dbFunc.insertUser(nombre: "Isaac", email: email, pass: pass, fecha_nac: "02/04/1997")
+        }
         
+        var existeUser2: Bool = false
+        email = "juanjo@gmail.com"
+        pass = "1234"
+        existeUser2 = dbFunc.existsUserLogin(email: email, pass: pass)
+        
+        
+        if !existeUser2
+        {
+            dbFunc.insertUser(nombre: "Juanjo", email: email, pass: pass, fecha_nac: "25/02/2001")
+        }
+                
     }
 }
