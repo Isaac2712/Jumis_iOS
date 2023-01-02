@@ -50,6 +50,7 @@ class User{
     var email: String
     var password: String
     var fecha_nacimiento: String
+    var dbFunc = DBHelper()
     
     init(USERID: Int32, nombre: String, email: String, password: String, fecha_nacimiento: String) {
         self.USERID = USERID
@@ -57,5 +58,9 @@ class User{
         self.email = email
         self.password = password
         self.fecha_nacimiento = fecha_nacimiento
+        
+        dbFunc.insertUser(nombre: "Isaac", email: "isaac@gmail.com", pass: "1234", fecha_nac: "02/04/1997")
+        dbFunc.insertUser(nombre: "Juanjo", email: "juanjo@gmail.com", pass: "1234", fecha_nac: "25/02/2001")
+        
     }
 }

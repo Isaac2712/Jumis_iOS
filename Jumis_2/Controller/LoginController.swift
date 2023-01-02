@@ -92,8 +92,7 @@ class LoginController: UIViewController {
                 {
                     let vc = segue.destination as? ViewController
                     vc?.emailUsu = usuario.text!
-                } else
-                {
+                } else {
                     //Mostrar alerta si no existe el usuario en la BBDD
                     let alert = UIAlertController(title: "Identificación", message:"El usuario y contraseña no son correctos", preferredStyle: .alert)
                     
@@ -106,6 +105,4 @@ class LoginController: UIViewController {
             }
         }
     }
-    
-    //MARK: Action buttons
 }
