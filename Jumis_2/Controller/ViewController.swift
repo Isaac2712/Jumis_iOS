@@ -28,6 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableViewTasks: UITableView!
     
     //MARK: Actions
+    @IBAction func GoAddTask(_ sender: Any) {
+        if let vc = storyboard?.instantiateViewController(identifier: "AddTaskController") as? AddTaskController {
+            vc.recibiID = dataUser[0].USERID
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     @IBAction func Menu(_ sender: Any) {
         contenidoView.isHidden = false
         tableViewMenu.isHidden = false
