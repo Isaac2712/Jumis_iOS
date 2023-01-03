@@ -13,6 +13,7 @@ class UserController: UIViewController {
     var recibirEmail: String!
     var dbFunc = DBHelper()
     var dataUser = Array<User>()
+    var recibirIDUsu: Int32 = 0
     
     //MARK: Outlets
     @IBOutlet weak var nombreUsuario: UILabel!
@@ -40,7 +41,7 @@ class UserController: UIViewController {
     
     @IBAction func Guardar(_ sender: Any) {
         //Guardar usuario BBDD
-        var oldEmail:String! = dataUser[0].email
+        let oldEmail:String! = recibirEmail
         if(emailUsuario.text != "" && contrasenaUsuario.text != "" && fechaNacimientoUsuario.text != "")
         {
             //Deshabilitar y habilitar botones
@@ -58,9 +59,9 @@ class UserController: UIViewController {
             contrasenaUsuario.isSecureTextEntry = true
             
             // El email antiguo nos interesa recogerlo antes del guardar para mandarselo al update
-            var email:String! = emailUsuario.text!
-            var pass:String! = contrasenaUsuario.text!
-            var fecha:String! = fechaNacimientoUsuario.text!
+            let email:String! = emailUsuario.text!
+            let pass:String! = contrasenaUsuario.text!
+            let fecha:String! = fechaNacimientoUsuario.text!
             
             dbFunc.updateUser(oldEmail: oldEmail, email: email, pass: pass, fecha: fecha)
             
@@ -103,7 +104,7 @@ class UserController: UIViewController {
         
         //Recogemos email usuario de login
         emailUsuario.text = recibirEmail
-        dataUser = dbFunc.dataUser(email: (emailUsuario.text ?? ""))
+        dataUser = dbFunc.dataUser(email: emailUsuario.text!)
         nombreUsuario.text = dataUser[0].nombre
         emailUsuario.text = dataUser[0].email
         contrasenaUsuario.text = dataUser[0].password

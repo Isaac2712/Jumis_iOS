@@ -15,12 +15,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var imagenes = ["usuario", "ajustes","close"]
     //TableViewTasks
     var tasksBD = Array<Task>()
-    var dataUser = Array<User>()
     var viewOpen: Bool = true
+    var nombreUsu: String?
     var emailUsu: String?
+    var IDUsu: Int32 = 0
     let label = UILabel(frame: CGRect(x: 30, y: 120, width: 300, height: 20))
     //BBDD
     let dbFunc = DBHelper()
+    var aux: Int32 = 0
 
     //MARK: Outlets
     @IBOutlet weak var contenidoView: UIView!
@@ -30,7 +32,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: Actions
     @IBAction func GoAddTask(_ sender: Any) {
         if let vc = storyboard?.instantiateViewController(identifier: "AddTaskController") as? AddTaskController {
-            vc.recibiID = dataUser[0].USERID
+            vc.recibirID = IDUsu
+            vc.emailUsu = emailUsu
+            vc.nombreUsu = nombreUsu
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -78,14 +82,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         //Label programmatically
         label.textColor = .white
-        label.text = "Lista del usuario \(emailUsu ?? "")"
+        label.text = "Lista del usuario \(nombreUsu ?? "")"
         self.view.addSubview(label)
-        
-        
-        dataUser = dbFunc.dataUser(email: (emailUsu ?? ""))
-        var aux:Int32 = dataUser[0].USERID
-        print(aux)
-        tasksBD = dbFunc.readTaskUser(id: aux)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tasksBD = dbFunc.readTaskUser(id: IDUsu)
     }
     
     //MARK: TableView
@@ -114,6 +117,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
            if indexPath.row == 0 {
                if let vc = storyboard?.instantiateViewController(identifier: "UserController") as? UserController {
                    vc.recibirEmail = emailUsu
+                   vc.recibirIDUsu = IDUsu
                    self.navigationController?.pushViewController(vc, animated: true)
                }
            } else if indexPath.row == 1 {

@@ -15,6 +15,7 @@ class LoginController: UIViewController {
     var recibirEmailRegistro: String = ""
     var recibirPassRegistro: String = ""
     var dbFunc = DBHelper()
+    var dataUser = Array<User>()
     
     //MARK: Global
     //static var sessionActive = 0
@@ -90,8 +91,11 @@ class LoginController: UIViewController {
                 existe = dbFunc.existsUserLogin(email: usuario.text!, pass: contrasena.text!)
                 if existe
                 {
+                    dataUser = dbFunc.dataUser(email: (usuario.text ?? ""))
                     let vc = segue.destination as? ViewController
-                    vc?.emailUsu = usuario.text!
+                    vc?.nombreUsu = dataUser[0].nombre
+                    vc?.emailUsu = dataUser[0].email
+                    vc?.IDUsu = dataUser[0].USERID
                 } else {
                     //Mostrar alerta si no existe el usuario en la BBDD
                     let alert = UIAlertController(title: "Identificación", message:"El usuario y contraseña no son correctos", preferredStyle: .alert)

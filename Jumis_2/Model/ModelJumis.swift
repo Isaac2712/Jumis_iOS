@@ -27,6 +27,7 @@ class Task{
         dbFunc.insertTask(id: 1, nameTask: "Tarea UCAM" , description: "Acabar trabajo de iOS", nameList: "Lista de tareas", date: "16/01/2023", hour: "23:59")
         dbFunc.insertTask(id: 2, nameTask: "Tarea UCAM" , description: "Acabar trabajo de iOS", nameList: "Lista de tareas", date: "16/01/2023", hour: "23:59")
         dbFunc.insertTask(id: 3, nameTask: "Tarea de casa" , description: "Limpieza general", nameList: "Lista de tareas", date: "01/01/2023", hour: "8:00") //Esta tarea no será asignada a ningún usuario para probar que solo se asignan las que hemos insertado en la clase UserTask
+         
     }
 }
 

@@ -109,7 +109,7 @@ class DBHelper{
         sqlite3_finalize(insertStatement)
     }
     
-    func insertTask(id: Int, nameTask: String, description: String, nameList: String, date: String, hour: String ){
+    func insertTask(id: Int32, nameTask: String, description: String, nameList: String, date: String, hour: String){
         let insertStatementString = "INSERT INTO Task (TASKID, nameTask, description, nameList, date, hour) VALUES (?, ?, ?, ?, ?, ?);"
         var insertStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
@@ -119,6 +119,7 @@ class DBHelper{
             sqlite3_bind_text(insertStatement, 4, (nameList as NSString).utf8String, -1, nil)
             sqlite3_bind_text(insertStatement, 5, (date as NSString).utf8String, -1, nil)
             sqlite3_bind_text(insertStatement, 6, (hour as NSString).utf8String, -1, nil)
+            
            
            if sqlite3_step(insertStatement) == SQLITE_DONE {
                print("Successfully inserted row to insertTask.")
@@ -149,6 +150,22 @@ class DBHelper{
     }
     
     //MARK: Id
+    func idTask() -> Int32{
+        let queryStatementString = "SELECT TASKID FROM Task ORDER BY TASKID DESC LIMIT 1;"
+        var queryStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let taskid = sqlite3_column_int(queryStatement, 0)
+                sqlite3_finalize(queryStatement)
+                return taskid
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+        }
+        sqlite3_finalize(queryStatement)
+        return 0
+    }
+    
     func idUser() -> Int32{
         let queryStatementString = "SELECT USERID FROM User ORDER BY USERID DESC LIMIT 1;"
         var queryStatement: OpaquePointer? = nil
