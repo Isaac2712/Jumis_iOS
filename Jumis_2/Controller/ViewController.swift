@@ -113,7 +113,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellMenu") as! TableViewCellMenu
             if(indexPath.row == 0) {
                 cell.titleLabel.text = nombreUsu
-            } else {
+            } else if(indexPath.row == 2) {
+                cell.titleLabel.text = titleName[indexPath.row]
+                cell.titleLabel.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+            } else{
                 cell.titleLabel.text = titleName[indexPath.row]
             }
             cell.imageIcon.image = UIImage(named: imagenes[indexPath.row])
