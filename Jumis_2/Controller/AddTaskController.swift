@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddTaskController: UIViewController {
+class AddTaskController: UIViewController{
 
     //MARK: Variables
     var recibirID:Int32 = 0
@@ -61,6 +61,8 @@ class AddTaskController: UIViewController {
     //MARK: Override
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         //print("ID DEL USUARIO \(recibiID)")
     }
 }

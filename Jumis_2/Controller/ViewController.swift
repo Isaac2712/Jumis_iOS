@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //MARK: Variables
     //TableViewMenu
-    var titleName = ["User", "Settings", "Cerrar sesión"]
+    var titleName = ["Perfil", "Ajustes", "Cerrar sesión"]
     var imagenes = ["usuario", "ajustes","close"]
     //TableViewTasks
     var tasksBD = Array<Task>()
@@ -19,7 +19,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var nombreUsu: String?
     var emailUsu: String?
     var IDUsu: Int32 = 0
-    let label = UILabel(frame: CGRect(x: 30, y: 120, width: 300, height: 20))
+    let labelEmail = UILabel(frame: CGRect(x: 30, y: 120, width: 300, height: 40))
+    let labelLista = UILabel(frame: CGRect(x: 30, y: 180, width: 300, height: 40))
     //BBDD
     let dbFunc = DBHelper()
     var aux: Int32 = 0
@@ -43,7 +44,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         contenidoView.isHidden = false
         tableViewMenu.isHidden = false
         if !viewOpen {
-            label.isHidden = true
+            labelEmail.isHidden = true
+            labelLista.isHidden = true
             viewOpen = true
             contenidoView.frame = CGRect(x:0, y: 117, width: 0, height: 100)
             tableViewMenu.frame = CGRect(x:0, y: 0, width: 0, height: 100)
@@ -52,7 +54,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.tableViewMenu.frame = CGRect(x:0, y: 0, width: 212, height: 100)
             }
         } else {
-            label.isHidden = false
+            labelEmail.isHidden = false
+            labelLista.isHidden = false
             contenidoView.isHidden = true
             tableViewMenu.isHidden = true
             viewOpen = false
@@ -81,9 +84,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableViewMenu.backgroundColor = #colorLiteral(red: 0.1201617494, green: 0.2964957356, blue: 0.3807103634, alpha: 1)
 
         //Label programmatically
-        label.textColor = .white
-        label.text = "Lista del usuario \(nombreUsu ?? "")"
-        self.view.addSubview(label)
+        labelEmail.textColor = .white
+        labelEmail.font = labelEmail.font.withSize(40)
+        labelEmail.text = "Usuario \(nombreUsu ?? "")"
+        self.view.addSubview(labelEmail)
+        
+        labelLista.textColor = .white
+        labelLista.font = labelLista.font.withSize(30)
+        labelLista.text = "Lista:"
+        self.view.addSubview(labelLista)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,7 +111,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == tableViewMenu {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellMenu") as! TableViewCellMenu
-            cell.titleLabel.text = titleName[indexPath.row]
+            if(indexPath.row == 0) {
+                cell.titleLabel.text = nombreUsu
+            } else {
+                cell.titleLabel.text = titleName[indexPath.row]
+            }
             cell.imageIcon.image = UIImage(named: imagenes[indexPath.row])
             cell.backgroundColor = .black
             return cell
@@ -126,6 +139,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                }
            } else if indexPath.row == 2 {
                 self.navigationController?.popViewController(animated: true)
+           }
+       } else {
+           if let vc = storyboard?.instantiateViewController(identifier: "TaskDetailController") as? TaskDetailController {
+               vc.name = tasksBD[indexPath.row].nameTask
+               vc.descripcion = tasksBD[indexPath.row].description
+               vc.nameList = tasksBD[indexPath.row].nameList
+               vc.fecha = tasksBD[indexPath.row].date
+               vc.hora = tasksBD[indexPath.row].hour
+               self.navigationController?.pushViewController(vc, animated: true)
            }
        }
     }

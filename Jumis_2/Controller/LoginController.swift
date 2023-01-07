@@ -22,26 +22,11 @@ class LoginController: UIViewController {
     //static var email = ""
     
     //MARK: Outlets
-    @IBOutlet weak var usuario: UITextField!{
-        didSet{
-            let colorWhite = NSAttributedString(string: "Usuario",
-                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-            usuario.attributedPlaceholder = colorWhite
-        }
-    }
-    
+    @IBOutlet weak var usuario: UITextField!    
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var registro: UIButton!
     @IBOutlet weak var logo: UIImageView!
-    
-    @IBOutlet weak var contrasena: UITextField!{
-        didSet{
-            let colorWhite = NSAttributedString(string: "Contraseña",
-                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-            contrasena.attributedPlaceholder = colorWhite
-            
-        }
-    }
+    @IBOutlet weak var contrasena: UITextField!
     
     //MARK: Override
     override func viewDidLoad() {

@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dbFunc.createTableUserTask()
         
         //Añadimos datos a la tabla User, Task y UserTask para contener datos en la APP
-        let users = User(USERID: 0, nombre: "", email: "", password: "", fecha_nacimiento: "")
-        let dataTask = Task(TASKID: 0, nameTask: "", description: "", nameList: "", date: "", hour: "")
-        let dataUserTask = UserTask(USERTASKID: 0, TASKUSERID: 0)
+        var _ = User(USERID: 0, nombre: "", email: "", password: "", fecha_nacimiento: "")
+        var _ = Task(TASKID: 0, nameTask: "", description: "", nameList: "", date: "", hour: "")
+        var _ = UserTask(USERTASKID: 0, TASKUSERID: 0)
         
         return true
     }

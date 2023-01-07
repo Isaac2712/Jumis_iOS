@@ -1,0 +1,119 @@
+
+
+"Bgf-Lt-Nnh.placeholder" = "english";
+/* Class = "UINavigationItem"; title = "Añadir tarea"; ObjectID = "1Ym-Rz-R7S"; */
+"1Ym-Rz-R7S.title" = "Add Task";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "2KR-w5-aMe"; */
+"2KR-w5-aMe.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2KR-w5-aMe"; */
+"2KR-w5-aMe.normalTitle" = "Button1";
+
+/* Class = "UILabel"; text = "Iniciar sesión"; ObjectID = "4AM-Bo-gSO"; */
+"4AM-Bo-gSO.text" = "Log in";
+
+/* Class = "UIButton"; configuration.title = "Cerrar sesión"; ObjectID = "5Ze-lI-RUd"; */
+"5Ze-lI-RUd.configuration.title" = "Log out";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5Ze-lI-RUd"; */
+"5Ze-lI-RUd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Nombre de la lista"; ObjectID = "670-Tq-aBi"; */
+"670-Tq-aBi.text" = "Name of the list";
+
+/* Class = "UILabel"; text = "nombre_usuario"; ObjectID = "7HI-Bj-ev3"; */
+"7HI-Bj-ev3.text" = "username";
+
+/* Class = "UILabel"; text = "Descripción"; ObjectID = "AIS-UD-3SQ"; */
+"AIS-UD-3SQ.text" = "Description";
+
+/* Class = "UINavigationItem"; title = "Usuario"; ObjectID = "BsH-at-AJ1"; */
+"BsH-at-AJ1.title" = "User";
+
+/* Class = "UILabel"; text = "Contraseña"; ObjectID = "GJL-cw-lgt"; */
+"GJL-cw-lgt.text" = "Password";
+
+/* Class = "UILabel"; text = "Contraseña"; ObjectID = "LbH-i7-Irq"; */
+"LbH-i7-Irq.text" = "Password";
+
+/* Class = "UILabel"; text = "----------------------- or -----------------------"; ObjectID = "Lnu-Ne-ufb"; */
+"Lnu-Ne-ufb.text" = "----------------------- or -----------------------";
+
+/* Class = "UILabel"; text = "Nueva cuenta"; ObjectID = "Mrk-hf-rE7"; */
+"Mrk-hf-rE7.text" = "New Account";
+
+/* Class = "UIButton"; configuration.title = "Guardar"; ObjectID = "Q4f-Q0-3Gg"; */
+"Q4f-Q0-3Gg.configuration.title" = "Save";
+
+/* Class = "UILabel"; text = "Fecha y hora"; ObjectID = "Q7l-39-jXN"; */
+"Q7l-39-jXN.text" = "Date and Hour";
+
+/* Class = "UIButton"; configuration.title = "Cancelar"; ObjectID = "R3l-yJ-uUB"; */
+"R3l-yJ-uUB.configuration.title" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "Nombre de la lista"; ObjectID = "R80-ur-v9Q"; */
+"R80-ur-v9Q.placeholder" = "Name of the List";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "W7I-vX-nOR"; */
+"W7I-vX-nOR.title" = "Settings";
+
+/* Class = "UILabel"; text = "Nombre"; ObjectID = "Whx-rR-W4t"; */
+"Whx-rR-W4t.text" = "Name";
+
+/* Class = "UIButton"; configuration.title = "Ya tengo una cuenta creada"; ObjectID = "YWz-Eu-ctn"; */
+"YWz-Eu-ctn.configuration.title" = "I already have an account";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YWz-Eu-ctn"; */
+"YWz-Eu-ctn.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ZKl-Uq-tx0"; */
+"ZKl-Uq-tx0.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Cambiat tamaño tipografía"; ObjectID = "bTD-b4-xZE"; */
+"bTD-b4-xZE.text" = "Cambiat tamaño tipografía";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "cJF-sB-i1R"; */
+"cJF-sB-i1R.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cld-j2-UUb"; */
+"cld-j2-UUb.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Añadir tarea"; ObjectID = "g7U-vE-xtw"; */
+"g7U-vE-xtw.configuration.title" = "Add Task";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "g7U-vE-xtw"; */
+"g7U-vE-xtw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "ho9-Vs-xuP"; */
+"ho9-Vs-xuP.text" = "Email";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "hzm-wK-vhI"; */
+"hzm-wK-vhI.text" = "Email";
+
+/* Class = "UILabel"; text = "Fecha de nacimiento"; ObjectID = "k0R-VD-7Fz"; */
+"k0R-VD-7Fz.text" = "Date of Birth";
+
+/* Class = "UIButton"; configuration.title = "Modificar"; ObjectID = "l3A-2X-uwb"; */
+"l3A-2X-uwb.configuration.title" = "Modify";
+
+/* Class = "UILabel"; text = "Fecha de nacimiento"; ObjectID = "nbP-ed-1eO"; */
+"nbP-ed-1eO.text" = "Date of birth";
+
+/* Class = "UITextField"; placeholder = "Nombre tarea"; ObjectID = "sHN-xJ-IBn"; */
+"sHN-xJ-IBn.placeholder" = "Name of task";
+
+/* Class = "UILabel"; text = "Nombre de la tarea"; ObjectID = "uYU-5K-UtE"; */
+"uYU-5K-UtE.text" = "Name of the task";
+
+/* Class = "UILabel"; text = "Cambiar tipografía"; ObjectID = "vKR-x1-YmN"; */
+"vKR-x1-YmN.text" = "Cambiar tipografía";
+
+/* Class = "UIButton"; configuration.title = "Registrarse"; ObjectID = "xwf-PR-OkN"; */
+"xwf-PR-OkN.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xwf-PR-OkN"; */
+"xwf-PR-OkN.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign up"; ObjectID = "yoO-F5-gQc"; */
+"yoO-F5-gQc.configuration.title" = "Sign up";

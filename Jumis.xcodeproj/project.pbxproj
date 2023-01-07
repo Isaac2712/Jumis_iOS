@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2188EBC29698509007BCCFD /* TaskDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2188EBB29698509007BCCFD /* TaskDetailController.swift */; };
 		A218A52F2948992C0032CEC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A52E2948992C0032CEC2 /* AppDelegate.swift */; };
 		A218A5312948992C0032CEC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218A5302948992C0032CEC2 /* SceneDelegate.swift */; };
 		A218A5362948992C0032CEC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218A5342948992C0032CEC2 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2188EBB29698509007BCCFD /* TaskDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailController.swift; sourceTree = "<group>"; };
 		A218A52B2948992C0032CEC2 /* Jumis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jumis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218A52E2948992C0032CEC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A218A5302948992C0032CEC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		A2823830295C463200904E66 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		A2823838295C4B4200904E66 /* BDJumis.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BDJumis.sql; path = ../../../../Downloads/BDJumis.sql; sourceTree = "<group>"; };
 		A2A894A4294A1CE700644592 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A2A9D47C2966EF98006B8D6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A2BCB50029546355003CFEA2 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		A2C1E14C2964548500B9CF56 /* AddTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
 		A2D92F1829519FD80040F3AB /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
@@ -75,6 +78,10 @@
 		A2E4BAA92953271F008DA755 /* TableViewCellTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTask.swift; sourceTree = "<group>"; };
 		A2E4BAAA2953271F008DA755 /* TableViewCellTask.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellTask.xib; sourceTree = "<group>"; };
 		A2EA71A0295EE0D300EE3D8D /* ModelJumis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelJumis.swift; sourceTree = "<group>"; };
+		A2F5A9DB2966D45500068484 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		A2F5A9DC2966D45500068484 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A2F5A9DD2966D5A900068484 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		A2F5A9DE2966D5A900068484 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +202,7 @@
 				A21D422B2948D03300A5B637 /* SettingsController.swift */,
 				A2D92F1829519FD80040F3AB /* RegistroController.swift */,
 				A2C1E14C2964548500B9CF56 /* AddTaskController.swift */,
+				A2188EBB29698509007BCCFD /* TaskDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +301,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				"en-GB",
 			);
 			mainGroup = A218A5222948992C0032CEC2;
 			productRefGroup = A218A52C2948992C0032CEC2 /* Products */;
@@ -343,6 +353,7 @@
 			files = (
 				A218A52F2948992C0032CEC2 /* AppDelegate.swift in Sources */,
 				A21D422C2948D03300A5B637 /* SettingsController.swift in Sources */,
+				A2188EBC29698509007BCCFD /* TaskDetailController.swift in Sources */,
 				A2C1E14D2964548500B9CF56 /* AddTaskController.swift in Sources */,
 				A2EA71A1295EE0D300EE3D8D /* ModelJumis.swift in Sources */,
 				A2A894A5294A1CE700644592 /* LoginController.swift in Sources */,
@@ -393,6 +404,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				A218A5352948992C0032CEC2 /* Base */,
+				A2F5A9DB2966D45500068484 /* es */,
+				A2F5A9DD2966D5A900068484 /* en-GB */,
+				A2A9D47C2966EF98006B8D6F /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -401,6 +415,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A218A53A2948992E0032CEC2 /* Base */,
+				A2F5A9DC2966D45500068484 /* es */,
+				A2F5A9DE2966D5A900068484 /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -412,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -472,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

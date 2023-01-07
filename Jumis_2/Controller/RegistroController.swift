@@ -18,29 +18,9 @@ class RegistroController: UIViewController {
     var dbFunc = DBHelper()
     
     //MARK: Outlets
-    @IBOutlet weak var nombreUsu: UITextField!{
-        didSet{
-            let colorWhite = NSAttributedString(string: "Introduce nombre de usuario",
-                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-            nombreUsu.attributedPlaceholder = colorWhite
-        }
-    }
-    
-    @IBOutlet weak var emailUsu: UITextField!{
-        didSet{
-            let colorWhite = NSAttributedString(string: "Introduce tu correo eléctronico",
-                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-            emailUsu.attributedPlaceholder = colorWhite
-        }
-    }
-    
-    @IBOutlet weak var contrasenaUsu: UITextField!{
-        didSet{
-            let colorWhite = NSAttributedString(string: "Contraseña",
-                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-            contrasenaUsu.attributedPlaceholder = colorWhite
-        }
-    }
+    @IBOutlet weak var nombreUsu: UITextField!
+    @IBOutlet weak var emailUsu: UITextField!
+    @IBOutlet weak var contrasenaUsu: UITextField!
     @IBOutlet weak var fechaNacimientoUsu: UIDatePicker!
 
     //MARK: Override
