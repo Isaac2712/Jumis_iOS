@@ -25,9 +25,9 @@ class Task{
         self.hour = hour
         
         dbFunc.insertTask(id: 1, nameTask: "Tarea UCAM" , description: "Acabar trabajo de iOS", nameList: "Lista de tareas", date: "16/01/2023", hour: "23:59")
-        dbFunc.insertTask(id: 2, nameTask: "Tarea UCAM" , description: "Acabar trabajo de iOS", nameList: "Lista de tareas", date: "16/01/2023", hour: "23:59")
-        dbFunc.insertTask(id: 3, nameTask: "Tarea de casa" , description: "Limpieza general", nameList: "Lista de tareas", date: "01/01/2023", hour: "8:00") //Esta tarea no será asignada a ningún usuario para probar que solo se asignan las que hemos insertado en la clase UserTask
-         
+        dbFunc.insertTask(id: 2, nameTask: "Trabajo de Calidad" , description: "Acabar trabajo de calidad", nameList: "Lista de tareas", date: "16/01/2023", hour: "23:59")
+        dbFunc.insertTask(id: 3, nameTask: "Tarea UCAM" , description: "Acabar trabajo de iOS", nameList: "Lista de tareas", date: "16/01/2023", hour: "23:59")
+        dbFunc.insertTask(id: 4, nameTask: "Tarea de casa" , description: "Limpieza general", nameList: "Lista de tareas", date: "01/01/2023", hour: "8:00") //Esta tarea no será asignada a ningún usuario para probar que solo se asignan las que hemos insertado en la clase UserTask
     }
 }
 
@@ -41,7 +41,8 @@ class UserTask {
         self.TASKUSERID = TASKUSERID
         
         dbFunc.insertUserTask(usertaskid: 1, taskuserid: 1) //Introducimos la tarea con id 1 en el usuario que se registre con el id 1
-        dbFunc.insertUserTask(usertaskid: 2, taskuserid: 2) //Introducimos la tarea con id 2 en el usuario que se registre con el id 2
+        dbFunc.insertUserTask(usertaskid: 1, taskuserid: 2) //Introducimos la tarea con id 2 en el usuario que se registre con el id 1
+        dbFunc.insertUserTask(usertaskid: 2, taskuserid: 3) //Introducimos la tarea con id 3 en el usuario que se registre con el id 2
     }
 }
 

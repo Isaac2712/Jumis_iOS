@@ -71,7 +71,7 @@
 "ZKl-Uq-tx0.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Cambiat tamaño tipografía"; ObjectID = "bTD-b4-xZE"; */
-"bTD-b4-xZE.text" = "Cambiat tamaño tipografía";
+"bTD-b4-xZE.text" = "Change font size";
 
 /* Class = "UINavigationItem"; title = "Home"; ObjectID = "cJF-sB-i1R"; */
 "cJF-sB-i1R.title" = "Home";

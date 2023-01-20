@@ -18,39 +18,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-9I-fKQ">
-                        <rect key="frame" x="16" y="12" width="257" height="20"/>
+                        <rect key="frame" x="16" y="12" width="288" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="Color"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-kd-wwN">
-                        <rect key="frame" x="272" y="4" width="48" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="trash.fill" catalog="system">
-                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                        </buttonConfiguration>
-                    </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.16706615690000001" green="0.2925115526" blue="0.37255984539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <color key="tintColor" name="Color"/>
             <connections>
-                <outlet property="deleteTask" destination="JNh-kd-wwN" id="Qvt-zn-mOU"/>
                 <outlet property="nameTask" destination="3bN-9I-fKQ" id="QGL-n4-H2o"/>
             </connections>
             <point key="canvasLocation" x="33.587786259541986" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="trash.fill" catalog="system" width="119" height="128"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

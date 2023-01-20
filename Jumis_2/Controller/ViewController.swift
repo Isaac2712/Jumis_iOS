@@ -141,15 +141,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                    self.navigationController?.pushViewController(vc, animated: true)
                }
            } else if indexPath.row == 2 {
-                self.navigationController?.popViewController(animated: true)
+               if let vc = storyboard?.instantiateViewController(identifier: "LoginController") as? LoginController {
+                   self.navigationController?.pushViewController(vc, animated: true)
+               }
            }
        } else {
            if let vc = storyboard?.instantiateViewController(identifier: "TaskDetailController") as? TaskDetailController {
+               vc.idTask = tasksBD[indexPath.row].TASKID
                vc.name = tasksBD[indexPath.row].nameTask
                vc.descripcion = tasksBD[indexPath.row].description
                vc.nameList = tasksBD[indexPath.row].nameList
                vc.fecha = tasksBD[indexPath.row].date
                vc.hora = tasksBD[indexPath.row].hour
+               vc.emailUsu = emailUsu
+               vc.recibirID = IDUsu
+               vc.nombreUsu = nombreUsu
                self.navigationController?.pushViewController(vc, animated: true)
            }
        }

@@ -201,17 +201,18 @@ class DBHelper{
     }
     
     func readTaskUser(id:Int32) -> [Task]  {
-        let queryStatementString = "SELECT Task.nameTask, Task.description, Task.nameList, Task.date, Task.hour FROM Task INNER JOIN UserTask ON UserTask.TASKUSERID = Task.TASKID INNER JOIN User ON User.USERID = UserTask.USERTASKID WHERE USER.USERID = '\(id)';"
+        let queryStatementString = "SELECT Task.TASKID, Task.nameTask, Task.description, Task.nameList, Task.date, Task.hour FROM Task INNER JOIN UserTask ON UserTask.TASKUSERID = Task.TASKID INNER JOIN User ON User.USERID = UserTask.USERTASKID WHERE USER.USERID = '\(id)';"
         var queryStatement: OpaquePointer? = nil
         var tasks: [Task] = []
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
           while sqlite3_step(queryStatement) == SQLITE_ROW {
-              let nameTask = String(describing: String(cString: sqlite3_column_text(queryStatement, 0)))
-              let description = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
-              let nameList = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
-              let date = String(describing: String(cString: sqlite3_column_database_name(queryStatement, 3)))
-              let hour = String(describing: String(cString: sqlite3_column_text(queryStatement, 4)))
-              tasks.append(Task(TASKID: Int32(id), nameTask: nameTask, description: description, nameList: nameList, date: date, hour: hour))
+              let taskID = sqlite3_column_int(queryStatement, 0)
+              let nameTask = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+              let description = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+              let nameList = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
+              let date = String(describing: String(cString: sqlite3_column_database_name(queryStatement, 4)))
+              let hour = String(describing: String(cString: sqlite3_column_text(queryStatement, 5)))
+              tasks.append(Task(TASKID: Int32(taskID), nameTask: nameTask, description: description, nameList: nameList, date: date, hour: hour))
           }
         } else {
           print("SELECT statement could not be prepared")
@@ -284,6 +285,22 @@ class DBHelper{
            }
         } else {
            print("DROP statement could not be prepared")
+        }
+        sqlite3_finalize(deleteStatement)
+    }
+    
+    func deleteTaskByID(id:Int32) {
+        let deleteStatementStirng = "DELETE FROM Task WHERE TASKID = \(id);"
+        var deleteStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, deleteStatementStirng, -1, &deleteStatement, nil) == SQLITE_OK {
+            sqlite3_bind_int(deleteStatement, 1, Int32(id))
+            if sqlite3_step(deleteStatement) == SQLITE_DONE {
+                print("Successfully deleted row deleteTaskByID.")
+            } else {
+                print("Could not delete row deleteTaskByID.")
+            }
+        } else {
+            print("DELETE statement could not be prepared deleteTaskByID.")
         }
         sqlite3_finalize(deleteStatement)
     }
