@@ -107,7 +107,7 @@
 "uYU-5K-UtE.text" = "Name of the task";
 
 /* Class = "UILabel"; text = "Cambiar tipografía"; ObjectID = "vKR-x1-YmN"; */
-"vKR-x1-YmN.text" = "Cambiar tipografía";
+"vKR-x1-YmN.text" = "Change font";
 
 /* Class = "UIButton"; configuration.title = "Registrarse"; ObjectID = "xwf-PR-OkN"; */
 "xwf-PR-OkN.configuration.title" = "Sign Up";

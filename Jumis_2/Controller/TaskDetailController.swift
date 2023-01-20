@@ -37,7 +37,7 @@ class TaskDetailController: UIViewController {
         nameTask.text = name
         descriptionTask.text = descripcion
         nameListTask.text = nameList
-        fechaHoraTask.text = fecha
+        fechaHoraTask.text = hora
     }
     
     
